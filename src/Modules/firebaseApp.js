@@ -11,14 +11,14 @@ import { functions } from "firebase/app";
 var firebaseApp = firebase;
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyDqCkHOdMci3CUkImkRFJpYxldWBGndRyI",
-  authDomain: "veertly-88f6a.firebaseapp.com",
-  databaseURL: "https://veertly-88f6a.firebaseio.com",
-  projectId: "veertly-88f6a",
-  storageBucket: "veertly-88f6a.appspot.com",
-  messagingSenderId: "806233534414",
-  appId: "1:806233534414:web:e516c3a031efab6cb7859f",
-  measurementId: "G-W5Z1YFFM3D"
+  apiKey: "AIzaSyChK-VeLyK0TIEH--W1mjfLUGP50DewdZE",
+  authDomain: "partyapp-53b91.firebaseapp.com",
+  databaseURL: "https://partyapp-53b91.firebaseio.com",
+  projectId: "partyapp-53b91",
+  storageBucket: "partyapp-53b91.appspot.com",
+  messagingSenderId: "548512127648",
+  appId: "1:548512127648:web:cc3847ad56a531c6c2c7c5",
+  measurementId: "G-VEVCL74WVY"
   // apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   // authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
   // databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,

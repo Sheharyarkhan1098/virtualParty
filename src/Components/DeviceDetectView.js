@@ -10,12 +10,12 @@ import {
 // import { Alert } from "@material-ui/lab";
 import { isMobileFromRdd, isChromeFromRRd } from "../Utils/device";
 
-const MOBILE_MSG = "Veertly is best experienced on desktop or laptop. Some features may not be available on mobile";
-const CHROME_APP = "Veertly is best experienced on Google Chrome";
+const MOBILE_MSG = "Virtual Faction is best experienced on desktop or laptop. Some features may not be available on mobile";
+const CHROME_APP = "Virtual Faction is best experienced on Google Chrome";
 
 const DeviceDetectView = ({ children }) => {
   const [open, setOpen] = useState(false);
-  const [message, setMessage]= useState("");
+  const [message, setMessage] = useState("");
 
   useEffect(() => {
     if (isMobileFromRdd()) {
@@ -40,20 +40,20 @@ const DeviceDetectView = ({ children }) => {
   };
 
   return (
-  <>
-    {children}
-  
-    <Snackbar
-      anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
-      open={open}
-      // autoHideDuration={2000}
-      message={message}
-      // onClose={handleClose}
-      action={
-        <Button onClick={handleClose} color="secondary" >
-          OK
+    <>
+      {children}
+
+      <Snackbar
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+        open={open}
+        // autoHideDuration={2000}
+        message={message}
+        // onClose={handleClose}
+        action={
+          <Button onClick={handleClose} color="secondary" >
+            OK
         </Button>
-      }
+        }
       />
 
       {/* <Dialog
@@ -76,7 +76,8 @@ const DeviceDetectView = ({ children }) => {
         </DialogActions>
       </Dialog> */}
 
-  </>
-)}
+    </>
+  )
+}
 
 export default DeviceDetectView;
