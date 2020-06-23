@@ -9,7 +9,7 @@ import { eventSessionReducer as eventSession } from "./eventSession";
 // import storage from "redux-persist/lib/storage";
 
 // const persistConfigChat = {
-//   key: "veertly-storage",
+//   key: "virtualfaction-storage",
 //   storage,
 //   whitelist: ["messageCount"]
 // };

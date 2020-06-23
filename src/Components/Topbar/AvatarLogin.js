@@ -117,7 +117,7 @@ export default (props) => {
             {myEvents && myEvents.length > 0 && (
               <MenuItem
                 onClick={() => {
-                  window.open("https://cockpit.veertly.com", "_blank");
+                  window.open("https://cockpit.virtualfaction.com", "_blank");
                   handleClose();
                 }}
               >
@@ -154,7 +154,7 @@ export default (props) => {
               state: { from: location }
             }}
             className={classes.buttonLink}
-            // style={{ marginTop: user ? 4 : 0 }}
+          // style={{ marginTop: user ? 4 : 0 }}
           >
             Login
           </Button>

@@ -25,7 +25,7 @@ const useJitsi = ({
     const prefix = process.env.REACT_APP_JITSI_ROOM_PREFIX;
     const prefixStr = prefix !== undefined ? `-${prefix}-` : "";
 
-    const roomName = `veertly${prefixStr}-${sessionId}`;
+    const roomName = `virtualfaction${prefixStr}-${sessionId}`;
 
     if (conferenceVideoType === "JITSI" && loaded && lastRoomLoaded !== roomName) {
       // dispose existing jitsi

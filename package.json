@@ -1,5 +1,5 @@
 {
-  "name": "veertly-app",
+  "name": "virtual-faction",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -30,7 +30,6 @@
     "graphql": "15.0.0",
     "graphql-tag": "^2.5.0",
     "husky": "^4.2.5",
-    "lint-staged": "^10.1.5",
     "lodash": "^4.17.15",
     "material-ui-snackbar-provider": "^1.4.0",
     "moment": "2.24.0",
@@ -84,20 +83,11 @@
   "resolutions": {
     "apollo-client": "2.6.3"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged --debug"
-    }
-  },
-  "lint-staged": {
-    "*.js": "eslint --max-warnings=0"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "lint": "eslint ."
+    "eject": "react-scripts eject"
   },
   "browserslist": {
     "production": [
@@ -113,11 +103,6 @@
   },
   "devDependencies": {
     "@welldone-software/why-did-you-render": "^4.2.0",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb": "^18.1.0",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.19.0",
     "react-snap": "^1.10.0"
   },
   "reactSnap": {

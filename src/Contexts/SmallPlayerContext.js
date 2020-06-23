@@ -12,7 +12,7 @@ import { useLocalStorage } from "react-use";
 
 const SmallPlayerContext = React.createContext({
   showSmallPayer: true,
-  setShowSmallPlayer: () => {},
+  setShowSmallPlayer: () => { },
   miniPlayerEnabled: false
 });
 
@@ -25,7 +25,7 @@ export const SmallPlayerContextProvider = ({ children }) => {
   const sessionId = useSelector(getSessionId);
 
   const [maximized, setMaximized] = useLocalStorage(
-    `veertly/${sessionId}/player-maximized`,
+    `virtualfaction/${sessionId}/player-maximized`,
     true
   );
 

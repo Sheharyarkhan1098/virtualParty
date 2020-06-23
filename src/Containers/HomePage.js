@@ -124,28 +124,28 @@ const HomePage = () => {
           </Grid>
         </Container> */}
         <a
-          href="https://twitter.com/veertly"
+          href="https://twitter.com/virtualfaction"
           target="_blank"
           rel="noopener noreferrer"
         >
           <TwitterIcon className={classes.socialNetworkIcon} />
         </a>
         <a
-          href="https://www.linkedin.com/company/veertly"
+          href="https://www.linkedin.com/company/virtualfaction"
           target="_blank"
           rel="noopener noreferrer"
         >
           <LinkedinIcon className={classes.socialNetworkIcon} />
         </a>
         <a
-          href="https://t.me/Veertly"
+          href="https://t.me/virtualfaction"
           target="_blank"
           rel="noopener noreferrer"
         >
           <TelegramIcon className={classes.socialNetworkIcon} />
         </a>
         <a
-          href="https://fb.me/Veertly"
+          href="https://fb.me/virtualfaction"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -159,14 +159,14 @@ const HomePage = () => {
           <InstagramIcon className={classes.socialNetworkIcon} />
         </a>
         <a
-          href="https://medium.com/veertly"
+          href="https://medium.com/virtualfaction"
           target="_blank"
           rel="noopener noreferrer"
         >
           <MediumIcon className={classes.socialNetworkIcon} />
         </a>
         <a
-          href="https://github.com/veertly/app"
+          href="https://github.com/virtualfaction/app"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -175,7 +175,7 @@ const HomePage = () => {
 
         {/* <a href="https://t.me/Veertly" target="_blank"></a> */}
         {/* <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-          info@veertly.com{" "}
+          info@virtualfaction.com{" "}
         </Typography>
         <Copyright /> */}
       </footer>
