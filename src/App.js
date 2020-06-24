@@ -38,11 +38,11 @@ import { RecoilRoot } from "recoil";
 
 const theme = createMuiTheme({
   palette: {
-    primary: { main: "#1c4762" },
+    primary: { main: "#272829" },
     secondary: { main: "#5cdb94" },
-    topbar: { main: "#1c4762" },
+    topbar: { main: "#272829" },
     background: {
-      default: "#F4F6F8",
+      default: "#0d0d0d",
       paper: "#FFF"
     },
     filtersSelected: "#c1d4e3"

@@ -47,14 +47,18 @@ export const SmallPlayerContextProvider = ({ children }) => {
     shallowEqual
   );
 
+  // const miniPlayerEnabled = React.useMemo(
+  //   () =>
+  //     miniPlayerFeature &&
+  //     miniPlayerFeature.enabled &&
+  //     eventSessionDetails.conferenceVideoType !== "JITSI",
+  //   [eventSessionDetails.conferenceVideoType, miniPlayerFeature]
+  // );
+
   const miniPlayerEnabled = React.useMemo(
     () =>
-      miniPlayerFeature &&
-      miniPlayerFeature.enabled &&
-      eventSessionDetails.conferenceVideoType !== "JITSI",
-    [eventSessionDetails.conferenceVideoType, miniPlayerFeature]
+      true
   );
-
   useEffect(() => {
     if (!miniPlayerEnabled || inMainStage) {
       setShowSmallPlayer(false);

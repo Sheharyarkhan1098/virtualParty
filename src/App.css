@@ -28,3 +28,20 @@
   cursor: -moz-grab !important;
   cursor: -webkit-grab !important;
 }
+h4{
+  color: white!important;
+}
+label{
+  color: #797979;
+}
+.makeStyles-root-228{
+  background-color:#262626;
+}
+.MuiTypography-colorTextSecondary-174{
+color: white!important;
+}
+.makeStyles-menuItem-281 {
+  background-color: inherit;
+  padding: 8px 0px;
+  border-left: 4px solid #000000!important;
+}

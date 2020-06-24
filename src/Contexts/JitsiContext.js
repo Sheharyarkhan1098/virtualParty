@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 const JitsiContext = React.createContext({
   jitsiApi: null,
-  setJitsiApi: () => {},
+  setJitsiApi: () => { },
   showSmallPayer: true,
-  setShowSmallPlayer: () => {},
-  miniPlayerEnabled: false
+  setShowSmallPlayer: () => { },
+  miniPlayerEnabled: true
 });
 
 export default JitsiContext;

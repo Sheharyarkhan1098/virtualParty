@@ -152,7 +152,7 @@ const HomePage = () => {
           <FacebookIcon className={classes.socialNetworkIcon} />
         </a>
         <a
-          href="https://instagram.com/veert.ly"
+          href="https://instagram.com/virtualfaction"
           target="_blank"
           rel="noopener noreferrer"
         >
