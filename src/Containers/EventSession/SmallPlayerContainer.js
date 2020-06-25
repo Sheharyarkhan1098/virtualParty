@@ -164,7 +164,7 @@ export const SmallPlayerContainer = ({ bounds = "" }) => {
   const [volume] = useState(50);
 
   const [playerPosition, setPlayerPosition] = useLocalStorage(
-    `virtualfaction/${sessionId}/player-position`,
+    `virtualclub/${sessionId}/player-position`,
     {
       x: window.innerWidth - SMALL_PLAYER_INITIAL_WIDTH - SIDE_PANE_WIDTH,
       y:

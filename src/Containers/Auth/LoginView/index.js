@@ -102,9 +102,9 @@ function LoginView({ loginWithEmail }) {
     dispatch(resetAccountState());
   };
   return (
-    <Page className={classes.root} title="Virtual Faction | Login">
+    <Page className={classes.root} title="Virtual Club | Login">
       <Container maxWidth="xs">
-        <Card className={classes.card}>
+        <Card className={classes.card} style={{ backgroundColor: "#e6e6e6" }}>
           <CardContent className={classes.content}>
             <Avatar className={classes.icon}>
               <LogoIcon />
@@ -113,7 +113,7 @@ function LoginView({ loginWithEmail }) {
               Sign in
             </Typography>
             <Typography variant="subtitle1" color="textSecondary">
-              Sign in on the Virtual Faction platform
+              Sign in on the Virtual Club platform
             </Typography>
             <Box mt={3}>
               <LoginForm

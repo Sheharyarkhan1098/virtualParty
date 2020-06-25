@@ -123,7 +123,7 @@ function LoginForm({ className, onSubmitSuccess, loginWithEmail, ...rest }) {
             <LoginButton
               variant="google"
               label="Sign in with Google"
-              type="light"
+              type="dark"
               onClick={handleGoogleClick}
             />
           </Box>
@@ -131,7 +131,7 @@ function LoginForm({ className, onSubmitSuccess, loginWithEmail, ...rest }) {
             <LoginButton
               variant="mail"
               label="Sign in with Email"
-              type="light"
+              type="dark"
               onClick={handleMailClick}
             />
           </Box>
@@ -140,7 +140,7 @@ function LoginForm({ className, onSubmitSuccess, loginWithEmail, ...rest }) {
               <LoginButton
                 variant="guest"
                 label="Sign in as Guest"
-                type="light"
+                type="dark"
                 onClick={handleGuestClick}
               />
             </Box>
@@ -188,53 +188,53 @@ function LoginForm({ className, onSubmitSuccess, loginWithEmail, ...rest }) {
               touched,
               values
             }) => (
-              <form
-                noValidate
-                className={clsx(classes.root, className)}
-                onSubmit={handleSubmit}
-                {...rest}
-              >
-                <TextField
-                  error={Boolean(touched.email && errors.email)}
-                  fullWidth
-                  // autoFocus
-                  helperText={touched.email && errors.email}
-                  label="Email Address"
-                  margin="normal"
-                  name="email"
-                  onBlur={handleBlur}
-                  onChange={handleChange}
-                  type="email"
-                  value={values.email}
-                  variant="outlined"
-                />
-                <TextField
-                  error={Boolean(touched.password && errors.password)}
-                  fullWidth
-                  helperText={touched.password && errors.password}
-                  label="Password"
-                  margin="normal"
-                  name="password"
-                  onBlur={handleBlur}
-                  onChange={handleChange}
-                  type="password"
-                  value={values.password}
-                  variant="outlined"
-                />
-                <Box mt={3} mb={1}>
-                  <Button
-                    color="primary"
-                    disabled={isSubmitting}
+                <form
+                  noValidate
+                  className={clsx(classes.root, className)}
+                  onSubmit={handleSubmit}
+                  {...rest}
+                >
+                  <TextField
+                    error={Boolean(touched.email && errors.email)}
                     fullWidth
-                    size="large"
-                    type="submit"
-                    variant="contained"
-                  >
-                    Log In
+                    // autoFocus
+                    helperText={touched.email && errors.email}
+                    label="Email Address"
+                    margin="normal"
+                    name="email"
+                    onBlur={handleBlur}
+                    onChange={handleChange}
+                    type="email"
+                    value={values.email}
+                    variant="outlined"
+                  />
+                  <TextField
+                    error={Boolean(touched.password && errors.password)}
+                    fullWidth
+                    helperText={touched.password && errors.password}
+                    label="Password"
+                    margin="normal"
+                    name="password"
+                    onBlur={handleBlur}
+                    onChange={handleChange}
+                    type="password"
+                    value={values.password}
+                    variant="outlined"
+                  />
+                  <Box mt={3} mb={1}>
+                    <Button
+                      color="primary"
+                      disabled={isSubmitting}
+                      fullWidth
+                      size="large"
+                      type="submit"
+                      variant="contained"
+                    >
+                      Log In
                   </Button>
-                </Box>
-              </form>
-            )}
+                  </Box>
+                </form>
+              )}
           </Formik>
         </>
       )}
@@ -248,7 +248,7 @@ LoginForm.propTypes = {
 };
 
 LoginForm.defaultProps = {
-  onSubmitSuccess: () => {}
+  onSubmitSuccess: () => { }
 };
 
 export default LoginForm;

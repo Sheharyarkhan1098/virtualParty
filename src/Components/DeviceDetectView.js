@@ -10,8 +10,8 @@ import {
 // import { Alert } from "@material-ui/lab";
 import { isMobileFromRdd, isChromeFromRRd } from "../Utils/device";
 
-const MOBILE_MSG = "Virtual Faction is best experienced on desktop or laptop. Some features may not be available on mobile";
-const CHROME_APP = "Virtual Faction is best experienced on Google Chrome";
+const MOBILE_MSG = "Virtual Club is best experienced on desktop or laptop. Some features may not be available on mobile";
+const CHROME_APP = "Virtual Club is best experienced on Google Chrome";
 
 const DeviceDetectView = ({ children }) => {
   const [open, setOpen] = useState(false);

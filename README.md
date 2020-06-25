@@ -1,10 +1,10 @@
 # Introduction
 
-Virtual Faction is a virtual conference platform focused on the networking of the participants. When entering a Virtual Faction conference, participants can attend the traditional virtual webinar (aka Conference Room) or network with other participants on the "Networking Area".
+Virtual Club is a virtual conference platform focused on the networking of the participants. When entering a Virtual Club conference, participants can attend the traditional virtual webinar (aka Conference Room) or network with other participants on the "Networking Area".
 
 On the networking area participants can check who is available and whos is talking with whom, like in a real event. They can then choose to join an existing conversation or start a new one with someone that is available.
 
-You can test the live version on our Demo conference room: https://app.virtualfaction.com/session/demo
+You can test the live version on our Demo conference room: https://app.virtualclub.com/session/demo
 
 # How does it work
 
@@ -24,4 +24,4 @@ We decided to open source this project in order to have a collaborative effort t
 
 All the code used for this application is hosted here and the front-end client is a ReactJS application. On the backend, we use [Firestore](https://firebase.google.com/docs/firestore) database, from Firebase.
 
-If you need any help hosting Virtual Faction on your environment, please do not hesitate to contact me @joaoaguiam on twitter or telegram.
+If you need any help hosting Virtual Club on your environment, please do not hesitate to contact me @joaoaguiam on twitter or telegram.

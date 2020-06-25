@@ -100,7 +100,7 @@ function SimpleDialog(props) {
       default:
         calendarUrl = [
           "BEGIN:VCALENDAR",
-          "PRODID:-//Virtual Faction//NONSGML EventCalender//EN",
+          "PRODID:-//Virtual Club//NONSGML EventCalender//EN",
           "VERSION:2.0",
           "BEGIN:VEVENT",
           "UID:" + event.id,

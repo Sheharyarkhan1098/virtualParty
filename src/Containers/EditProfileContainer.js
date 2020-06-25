@@ -6,11 +6,34 @@ import EditProfileForm from "../Components/EditProfile/EditProfileForm";
 import SplashScreen from "../Components/Misc/SplashScreen";
 import { useHistory, useLocation } from "react-router-dom";
 import routes from "../Config/routes";
+import {
+  Card,
+  CardContent,
+  Container,
+  makeStyles,
 
+} from "@material-ui/core";
+const useStyles = makeStyles((theme) => ({
+  card: {
+    overflow: "visible",
+    display: "flex",
+    position: "relative",
+    "& > *": {
+      flexGrow: 1,
+      flexBasis: "50%",
+      width: "50%"
+    }
+  },
+  content: {
+    padding: theme.spacing(8, 5, 3, 4)
+  }
+}));
 const EditProfileContainer = () => {
   const [userAuth, initialising, error] = useAuthState(firebase.auth());
   const history = useHistory();
   const location = useLocation();
+  const classes = useStyles();
+
 
   let sessionId = React.useMemo(() => {
     return location.state && location.state.sessionId
@@ -38,11 +61,17 @@ const EditProfileContainer = () => {
     <Layout maxWidth="sm">
       <div style={{ padding: "48px 24px" }}>
         {userAuth && (
-          <EditProfileForm
-            userAuth={userAuth}
-            sessionId={sessionId ? sessionId.toLowerCase() : null}
-            profileUpdatedCallback={redirectUser}
-          />
+          <Container maxWidth="xs">
+            <Card className={classes.card} style={{ backgroundColor: "#e6e6e6" }}>
+              <CardContent className={classes.content}>
+                <EditProfileForm
+                  userAuth={userAuth}
+                  sessionId={sessionId ? sessionId.toLowerCase() : null}
+                  profileUpdatedCallback={redirectUser}
+                />
+              </CardContent>
+            </Card>
+          </Container>
         )}
       </div>
     </Layout>

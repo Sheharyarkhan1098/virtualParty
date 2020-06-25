@@ -1,5 +1,5 @@
 const isProduction = Boolean(
-  window.location.hostname.includes("app.virtualfaction.com")
+  window.location.hostname.includes("app.virtualclub.com")
 );
 
 export const trackEvent = (event, data) => {

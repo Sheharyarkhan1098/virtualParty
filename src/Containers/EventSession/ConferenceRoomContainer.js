@@ -113,7 +113,7 @@ export default () => {
     let prefix = process.env.REACT_APP_JITSI_ROOM_PREFIX;
     let prefixStr = prefix !== undefined ? `-${prefix}` : "";
 
-    const roomName = "virtualfaction" + prefixStr + "-" + sessionId;
+    const roomName = "virtualclub" + prefixStr + "-" + sessionId;
 
     if (
       eventSessionDetails.conferenceVideoType === "JITSI" &&
@@ -245,7 +245,7 @@ export default () => {
               Livestream not correctly configured...
             </Typography>
             <Typography variant="caption" display="block" align="center">
-              Please contact the event organizer or Virtual Faction team
+              Please contact the event organizer or Virtual Club team
             </Typography>
             <img
               alt="No Video available"

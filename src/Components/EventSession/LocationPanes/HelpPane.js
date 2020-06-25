@@ -82,12 +82,12 @@ const HelpPane = () => {
         <ExpansionPanelDetails>
           <div>
             <Typography>
-              Please make sure you have granted Virtual Faction permission to access
+              Please make sure you have granted Virtual Club permission to access
               your camera and microphone:
             </Typography>
             <ol>
               <li>
-                Allow Virtual Faction to access your camera and microphone when prompted
+                Allow Virtual Club to access your camera and microphone when prompted
               </li>
               <li>
                 If you blocked the access to the camera and microphone for any
@@ -123,7 +123,7 @@ const HelpPane = () => {
         <ExpansionPanelDetails>
           <div>
             <Typography>
-              Virtual Faction works best by using a recent version of the Chrome
+              Virtual Club works best by using a recent version of the Chrome
               browser.
             </Typography>
             <Typography>
@@ -220,7 +220,7 @@ const HelpPane = () => {
             <span role="img" aria-label="camera">
               📱
             </span>{" "}
-            Can I join a Virtual Faction event on my smartphone?
+            Can I join a Virtual Club event on my smartphone?
           </Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
@@ -236,7 +236,7 @@ const HelpPane = () => {
               >
                 Jitsi Meet
               </Link>
-              ' app. When accessing Virtual Faction on your mobile phone and entering
+              ' app. When accessing Virtual Club on your mobile phone and entering
               the main stage or a conversation, you will be forwarded to your
               'Jitsi Meet' mobile app to join the video call.
             </Typography>
@@ -253,11 +253,11 @@ const HelpPane = () => {
           Share your Feedback
         </Button>
         <a
-          href="https://www.virtualfaction.com"
+          href="https://www.virtualclub.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          www.virtualfaction.com
+          www.virtualclub.com
         </a>
       </div>
     </div>

@@ -515,7 +515,7 @@ function EditProfileForm(props) {
           <span>
             By proceeding, you accept the{" "}
             <a
-              href="https://veertly.com/terms-of-service/"
+              href="https://virtualclub.com/terms-of-service/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -523,7 +523,7 @@ function EditProfileForm(props) {
             </a>{" "}
             &amp;{" "}
             <a
-              href="https://veertly.com/privacy-policy"
+              href="https://virtualclub.com/privacy-policy"
               target="_blank"
               rel="noopener noreferrer"
             >

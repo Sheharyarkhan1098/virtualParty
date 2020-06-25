@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: theme.spacing(1)
   },
   logo: {
-    width: 250
+    width: 400,
     // marginTop: theme.spacing(1)
   },
   buttonLink: {

@@ -75,7 +75,7 @@ export default withRouter((props) => {
   }
   return (
     <Layout maxWidth="md">
-      <Page title="Virtual Faction | Create new event">
+      <Page title="Virtual Club | Create new event">
         <Paper className={classes.root}>
           {userAuth && <EditEventSessionForm userId={userAuth.uid} isAnonymous={userAuth.isAnonymous} />}
         </Paper>

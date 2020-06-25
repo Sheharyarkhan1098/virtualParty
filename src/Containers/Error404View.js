@@ -27,7 +27,7 @@ export default (props) => {
   const history = useHistory();
 
   return (
-    <Page title={"Virtual Faction | Page not found"}>
+    <Page title={"Virtual Club | Page not found"}>
       <div className={classes.root}>
         <CenteredTopbar />
 

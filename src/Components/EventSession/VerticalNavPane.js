@@ -73,20 +73,25 @@ const useStyles = makeStyles((theme) => ({
   titleBox: {
     padding: theme.spacing(1.5, 1, 1.5, 2),
     display: "flex",
-    alignItems: "center"
+    alignItems: "center",
+    backgroundColor: "#e6e6e6"
+
   },
   rotateIcon: {
     "-ms-transform": "rotate(180deg)",
     transform: "rotate(180deg)"
   },
   paneTitle: {
-    textTransform: "uppercase"
+    textTransform: "uppercase",
+    backgroundColor: "#e6e6e6"
+
   },
   collapseButton: {
     color: theme.palette.primary.light
   },
   paneContent: {
-    overflow: "auto"
+    overflow: "auto",
+    backgroundColor: "#e6e6e6"
   },
   infoIcon: {
     color: theme.palette.primary.light,

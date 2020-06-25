@@ -30,7 +30,7 @@ import { resetAccountState } from "../../../Redux/account";
 const useStyles = makeStyles((theme) => ({
   root: {
     justifyContent: "center",
-    backgroundColor: theme.palette.background.dark,
+    backgroundColor: theme.palette.background.light,
     display: "flex",
     height: "100%",
     minHeight: "100%",
@@ -101,18 +101,18 @@ function RegisterView() {
   };
 
   return (
-    <Page className={classes.root} title="Virtual Faction | Create Account">
+    <Page className={classes.root} title="Virtual Club | Create Account">
       <Container maxWidth="xs">
-        <Card className={classes.card}>
+        <Card className={classes.card} style={{ backgroundColor: "#e6e6e6" }}>
           <CardContent className={classes.content}>
             <Avatar className={classes.icon}>
               <LogoIcon />
             </Avatar>
-            <Typography variant="h4" color="primary">
+            <Typography variant="h4" style={{ color: "black" }}>
               Sign up
             </Typography>
-            <Typography variant="subtitle1" color="textSecondary">
-              Sign up on the Virtual Faction platform
+            <Typography variant="Headline5" color="textSecondary">
+              Sign up on the Virtual Club platform
             </Typography>
             <Box mt={3}>
               <RegisterForm onSubmitSuccess={handleSubmitSuccess} />
@@ -155,7 +155,7 @@ function RegisterView() {
           </CardMedia> */}
         </Card>
       </Container>
-    </Page>
+    </Page >
   );
 }
 

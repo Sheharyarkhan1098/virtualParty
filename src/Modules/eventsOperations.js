@@ -12,7 +12,7 @@ export const conferenceExists = async (sessionId) => {
 
 export const userRegisteredEvent = (sessionId) => {
   //, userId, email) => {
-  let storageKey = "/virtualfaction/" + sessionId;
+  let storageKey = "/virtualclub/" + sessionId;
   if (localStorage && localStorage.getItem(storageKey)) {
     return true;
   }
@@ -99,7 +99,7 @@ export const registerToEvent = async (eventSession, userId, userDetails) => {
       originalSessionId,
       eventBeginDate: eventBeginDate ? eventBeginDate : null
     });
-  localStorage.setItem("/virtualfaction/" + sessionId, true);
+  localStorage.setItem("/virtualclub/" + sessionId, true);
 };
 
 export const isUserRegisteredToEvent = async (sessionId, userId) => {

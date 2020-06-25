@@ -262,7 +262,7 @@ exports.onUserRegisteredEvent = functions.firestore
         );
       } else {
         await sendgrid.sendUserRegistered(
-          "info@virtualfaction.com",
+          "info@virtualclub.com",
           "GUEST-" + firstName,
           eventLink,
           title,

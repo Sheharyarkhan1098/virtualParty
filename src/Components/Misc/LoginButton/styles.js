@@ -9,8 +9,9 @@ const baseStyle = {
   lineHeight: "48px",
   display: "block",
   borderRadius: "1px",
+  color: "#2c3531",
   transition: "background-color .218s, border-color .218s, box-shadow .218s",
-  fontFamily: "Roboto,arial,sans-serif",
+  fontFamily: "Raleway,arial,Helvetica",
   cursor: "pointer",
   userSelect: "none"
 };
@@ -36,7 +37,7 @@ export const iconStyle = {
   marginTop: "1px",
   marginLeft: "1px",
   float: "left",
-  backgroundColor: "#fff",
+  backgroundColor: "#E0E0E0",
   borderRadius: "1px",
   whiteSpace: "nowrap"
 };

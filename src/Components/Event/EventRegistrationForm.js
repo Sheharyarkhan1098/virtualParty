@@ -193,7 +193,7 @@ function EventRegistrationForm(props) {
     () =>
       `Join me in the virtual event ${eventSession.title} at ${moment(
         eventSession.eventBeginDate.toDate()
-      ).format("lll")} on @virtualfaction `,
+      ).format("lll")} on @virtualclub `,
     [eventSession.title, eventSession.eventBeginDate]
   );
 
@@ -328,7 +328,7 @@ function EventRegistrationForm(props) {
               <span>
                 By proceeding, you accept the{" "}
                 <a
-                  href="https://virtualfaction.com/terms-of-service/"
+                  href="https://virtualclub.com/terms-of-service/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -336,7 +336,7 @@ function EventRegistrationForm(props) {
                 </a>{" "}
                 &amp;{" "}
                 <a
-                  href="https://virtualfaction.com/privacy-policy"
+                  href="https://virtualclub.com/privacy-policy"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -395,11 +395,11 @@ function EventRegistrationForm(props) {
             </Typography>
             <Typography align="center">{registrationFailed}</Typography>
             <Typography align="center" gutterBottom>
-              Please contact Virtual Faction team if you have any question
+              Please contact Virtual Club team if you have any question
             </Typography>
 
             <Typography align="center" gutterBottom>
-              <a href="mailto:info@virtualfaction.com">info@virtualfaction.com</a>
+              <a href="mailto:info@virtualclub.com">info@virtualclub.com</a>
             </Typography>
             <div style={{ textAlign: "center", marginTop: 32 }}>
               <Button variant="text" color="primary" onClick={props.onClose}>

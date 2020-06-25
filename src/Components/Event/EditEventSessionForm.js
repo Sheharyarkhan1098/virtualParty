@@ -262,7 +262,7 @@ function EditEventSessionForm(props) {
     () =>
       `Join me in the virtual event ${values.title} at ${
       selectedDate.begin ? selectedDate.begin.format("lll") : ""
-      } on @virtualfaction `,
+      } on @virtualclub `,
     [values.title, selectedDate.begin]
   );
 
@@ -1277,11 +1277,11 @@ function EditEventSessionForm(props) {
                 An error occured while creating the event...{" "}
               </Typography>
               <Typography align="center" gutterBottom>
-                Please contact Virtual Faction team if the error persists
+                Please contact Virtual Club team if the error persists
               </Typography>
 
               <Typography align="center" gutterBottom>
-                <a href="mailto:info@virtualfaction.com">info@virtualfaction.com</a>
+                <a href="mailto:info@virtualclub.com">info@virtualclub.com</a>
               </Typography>
             </React.Fragment>
           )}

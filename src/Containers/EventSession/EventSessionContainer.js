@@ -9,7 +9,7 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { useTheme } from "@material-ui/core/styles";
 import { useSelector, shallowEqual } from "react-redux";
 import NetworkingRoomContainer from "./NetworkingRoomContainer";
-import PoweredByVirtualFaction from "../../Assets/Faction.svg";
+import PoweredByVirtualClub from "../../Assets/Faction.svg";
 
 import EventSessionTopbar from "../../Components/EventSession/EventSessionTopbar";
 import ConferenceRoomContainer from "./ConferenceRoomContainer";
@@ -176,7 +176,7 @@ const useStyles = makeStyles((theme) => ({
     // padding: theme.spacing(1, 0),
     borderRadius: "0 16px 0 0"
   },
-  PoweredByVirtualFaction: {
+  PoweredByVirtualclub: {
     position: "absolute",
     bottom: 8,
     left: 8,
@@ -255,7 +255,7 @@ const EventSessionContainer = (props) => {
 
   if (!eventSessionDetails) {
     return (
-      <Page title="Virtual Faction | Event not found">
+      <Page title="Virtual Club | Event not found">
         <div
           className={clsx({
             [classes.root]: true,
@@ -303,7 +303,7 @@ const EventSessionContainer = (props) => {
         [classes.shiftContent]: isDesktop
       })}
     >
-      <Page title={`Virtual Faction | ${eventSessionDetails.title}`}> </Page>
+      <Page title={`Virtual Club | ${eventSessionDetails.title}`}> </Page>
       <EditProfileDialog />
       {/* <ShareEventDialog /> */}
       <FeedbackDialog />
@@ -369,14 +369,14 @@ const EventSessionContainer = (props) => {
                 userCurrentLocation === VERTICAL_NAV_OPTIONS.rooms ||
                 userCurrentLocation === VERTICAL_NAV_OPTIONS.lobby) && (
                 <a
-                  href="https://virtualfaction.com"
+                  href="https://virtualclub.com"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <img
-                    alt="Powered by Virtual Faction"
-                    src={PoweredByVirtualFaction}
-                    className={classes.PoweredByVirtualFaction}
+                    alt="Powered by Virtual Club"
+                    src={PoweredByVirtualClub}
+                    className={classes.PoweredByVirtualclub}
                   />
                 </a>
               )}

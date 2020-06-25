@@ -114,7 +114,7 @@ export default (props) => {
             >
               My Profile
             </MenuItem>
-            {myEvents && myEvents.length > 0 && (
+            {/* {myEvents && myEvents.length > 0 && (
               <MenuItem
                 onClick={() => {
                   window.open("https://cockpit.virtualfaction.com", "_blank");
@@ -123,7 +123,7 @@ export default (props) => {
               >
                 My Events
               </MenuItem>
-            )}
+            )} */}
             {/* Open on a dialog (shown only on the event session)
             {isOwner && (
               <MenuItem

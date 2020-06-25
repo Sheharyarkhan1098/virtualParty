@@ -4,7 +4,7 @@ import { MAX_PARTICIPANTS_GROUP } from "../Config/constants";
 import { VERTICAL_NAV_OPTIONS } from "../Contexts/VerticalNavBarContext";
 import _ from "lodash";
 
-const getVideoConferenceAddress = (groupId) => `virtualfaction-${groupId}`;
+const getVideoConferenceAddress = (groupId) => `virtualclub-${groupId}`;
 
 export const createNewConversation = (
   originalSessionId,

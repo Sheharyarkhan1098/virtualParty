@@ -95,7 +95,7 @@ const EventPageContainer = (props) => {
 
   return (
     <div className={classes.root}>
-      <Page title={`Virtual Faction | ${eventSessionDetails.title}`}> </Page>
+      <Page title={`Virtual Club | ${eventSessionDetails.title}`}> </Page>
 
       {console.log("event11", eventSessionsEnabledFeatures)}
       <CenteredTopbar showCreate={true} />

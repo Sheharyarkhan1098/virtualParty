@@ -25,7 +25,7 @@ export const SmallPlayerContextProvider = ({ children }) => {
   const sessionId = useSelector(getSessionId);
 
   const [maximized, setMaximized] = useLocalStorage(
-    `virtualfaction/${sessionId}/player-maximized`,
+    `virtualclub/${sessionId}/player-maximized`,
     true
   );
 

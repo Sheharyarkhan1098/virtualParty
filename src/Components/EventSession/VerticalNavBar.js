@@ -169,7 +169,7 @@ const MenuIconContainer = ({
           </Badge>
         </Box>
         <Box className={classes.itemLabel}>
-          <Typography variant="caption" color="textSecondary">
+          <Typography variant="caption" color="textSecondary" style={{ color: "white" }}>
             {label}
           </Typography>
         </Box>
@@ -211,7 +211,7 @@ const VerticalNavBar = (props) => {
   const [lastCurrentSelection, setLastCurrentSelection] = React.useState(null);
 
   const [lastGlobalChatOpenCount, setLastGlobalChatOpenCount] = useLocalStorage(
-    `virtualfaction/chat/${CHAT_GLOBAL_NS}/${sessionId}/${userId}/count`,
+    `virtualclub/chat/${CHAT_GLOBAL_NS}/${sessionId}/${userId}/count`,
     0,
     {
       raw: true
@@ -349,7 +349,7 @@ const VerticalNavBar = (props) => {
   };
 
   return (
-    <PerfectScrollbar>
+    <PerfectScrollbar style={{ backgroundColor: "#262626" }}>
       <div className={classes.root}>
         {navBarOptions.map(({ icon, label, id, visible }) => {
           if (id === "divider" && visible) {

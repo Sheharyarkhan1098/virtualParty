@@ -59,7 +59,7 @@ const PresenceSwitch = () => {
         >
           <FormControlLabel
             label={switchValue ? "Available" : "Do not disturb"}
-            control={<Switch checked={switchValue} onChange={handleChange} />}
+            control={<Switch checked={switchValue} onChange={handleChange} style={{ color: "#white" }} />}
             labelPlacement="start"
           />
         </Tooltip>

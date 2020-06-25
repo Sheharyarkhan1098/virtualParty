@@ -11,7 +11,8 @@ import DialogClose from "../Misc/DialogClose";
 const useStyles = makeStyles((theme) => ({
   content: {
     position: "relative",
-    padding: 48
+    padding: 48,
+    backgroundColor: "#e6e6e6"
   },
   closeContainer: {
     position: "absolute"

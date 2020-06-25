@@ -67,12 +67,12 @@ export default withRouter(props => {
   return (
     <React.Fragment>
       {/* Hero unit */}
-      <Page title="Virtual Faction | Virtual events, virtual networking!"></Page>
+      <Page title="Virtual Club | Virtual events, virtual networking!"></Page>
       <div className={classes.heroContent}>
         <Container maxWidth="md">
           <div className={classes.heroButtons}>
-            <Typography variant="h4" style={{ textAlign: "center", fontWeight: "lighter", marginBottom: 48 }}>
-              Virtual Party by Virtual Faction
+            <Typography variant="h4" style={{ textAlign: "center", fontWeight: "lighter", marginBottom: 48, color: "white" }}>
+              Virtual Party by Virtual Club
             </Typography>
             <Grid container spacing={2} justify="center">
               <Grid item>

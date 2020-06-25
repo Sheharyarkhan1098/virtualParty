@@ -141,12 +141,12 @@ export const ATTENDEES_PANE_FILTER = {
 
 export default function ({
   paneFilter,
-  setIsEmptyPane = (isEmpty) => {},
+  setIsEmptyPane = (isEmpty) => { },
   showFilter = false,
   showStartConversation = false,
   showSearch = false,
   hideButtonsIfEmpty = false,
-  setTotalUsers = (count) => {}
+  setTotalUsers = (count) => { }
 }) {
   const [filterDialog, setFilterDialog] = React.useState(false);
 
@@ -289,11 +289,11 @@ export default function ({
             className={classes.avatar}
           />
         ) : (
-          <Avatar className={classes.avatar}>
-            {participant.firstName.charAt(0).toUpperCase()}
-            {participant.lastName.charAt(0).toUpperCase()}
-          </Avatar>
-        );
+            <Avatar className={classes.avatar}>
+              {participant.firstName.charAt(0).toUpperCase()}
+              {participant.lastName.charAt(0).toUpperCase()}
+            </Avatar>
+          );
 
         return (
           <div
@@ -338,7 +338,7 @@ export default function ({
                 >
                   {`${participant.companyTitle}${
                     participant.companyTitle.trim() !== "" ? " @ " : ""
-                  }${participant.company}`}
+                    }${participant.company}`}
                 </Typography>
               )}
 

@@ -185,9 +185,9 @@ export default function EventPage(props) {
   }, [enabledFeatures]);
 
 
-  const previewUrl =  !bannerUrl || bannerUrl.trim() === "" ? "/DefaultEventBanner.svg" : bannerUrl;
+  const previewUrl = !bannerUrl || bannerUrl.trim() === "" ? "/DefaultEventBanner.svg" : bannerUrl;
 
-  const location = useLocation(); 
+  const location = useLocation();
   const pageUrl = getUrl + location.pathname;
 
   return (
@@ -197,16 +197,16 @@ export default function EventPage(props) {
         <meta name="title" content={title} />
         <meta name="description" content="" />
 
-        <meta property="og:type" content="website"/>
-        <meta property="og:url" content={pageUrl}/>
-        <meta property="og:title" content={title}/>
-        <meta property="og:description" content=""/>
-        <meta property="og:image" content={previewUrl}/>
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content={previewUrl} />
 
-        <meta property="twitter:card" content="summary_large_image"/>
-        <meta property="twitter:url" content={pageUrl}/>
-        <meta property="twitter:title" content={title}/>
-        <meta property="twitter:description" content=""/>
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={pageUrl} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content="" />
         <meta property="twitter:image" content={previewUrl}></meta>
       </Helmet>
       {!isPreview && user && user.uid === owner && (
@@ -246,7 +246,7 @@ export default function EventPage(props) {
           variant="h4"
           color="primary"
           align="left"
-          // style={{ marginBottom: 24 }}
+        // style={{ marginBottom: 24 }}
         >
           {title}
         </Typography>

@@ -124,49 +124,49 @@ const HomePage = () => {
           </Grid>
         </Container> */}
         <a
-          href="https://twitter.com/virtualfaction"
+          href="https://twitter.com/virtualclub"
           target="_blank"
           rel="noopener noreferrer"
         >
           <TwitterIcon className={classes.socialNetworkIcon} />
         </a>
         <a
-          href="https://www.linkedin.com/company/virtualfaction"
+          href="https://www.linkedin.com/company/virtualclub"
           target="_blank"
           rel="noopener noreferrer"
         >
           <LinkedinIcon className={classes.socialNetworkIcon} />
         </a>
         <a
-          href="https://t.me/virtualfaction"
+          href="https://t.me/virtualclub"
           target="_blank"
           rel="noopener noreferrer"
         >
           <TelegramIcon className={classes.socialNetworkIcon} />
         </a>
         <a
-          href="https://fb.me/virtualfaction"
+          href="https://fb.me/virtualclub"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FacebookIcon className={classes.socialNetworkIcon} />
         </a>
         <a
-          href="https://instagram.com/virtualfaction"
+          href="https://instagram.com/virtualclub"
           target="_blank"
           rel="noopener noreferrer"
         >
           <InstagramIcon className={classes.socialNetworkIcon} />
         </a>
         <a
-          href="https://medium.com/virtualfaction"
+          href="https://medium.com/virtualclub"
           target="_blank"
           rel="noopener noreferrer"
         >
           <MediumIcon className={classes.socialNetworkIcon} />
         </a>
         <a
-          href="https://github.com/virtualfaction/app"
+          href="https://github.com/virtualclub/app"
           target="_blank"
           rel="noopener noreferrer"
         >

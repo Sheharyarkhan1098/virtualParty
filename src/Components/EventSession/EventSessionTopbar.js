@@ -195,10 +195,10 @@ export default withRouter((props) => {
     window.open(routes.EDIT_EVENT_SESSION(sessionId), "_blank");
   };
 
-  const handleCockpitClick = () => {
-    trackEvent("Cockpit clicked", { sessionId });
-    window.open("https://cockpit.virtualfaction.com/event/" + sessionId, "_blank");
-  };
+  // const handleCockpitClick = () => {
+  //   trackEvent("Cockpit clicked", { sessionId });
+  //   window.open("https://cockpit.virtualclub.com/event/" + sessionId, "_blank");
+  // };
 
   const logo = useMemo(() => {
     return customThemeFeature && customThemeFeature.logo
@@ -260,11 +260,11 @@ export default withRouter((props) => {
               <MenuItem onClick={handleEditProfileClick}>Edit profile</MenuItem>
               {isOwner && <Divider />}
               {isOwner && (
-                <MenuItem onClick={handleEditEventClick}>Edit event</MenuItem>
+                <MenuItem onClick={handleEditEventClick} >Edit event</MenuItem>
               )}
-              {isOwner && (
+              {/* {isOwner && (
                 <MenuItem onClick={handleCockpitClick}>Cockpit</MenuItem>
-              )}
+              )} */}
               {isOwner && <Divider />}
               {/* <MenuItem onClick={handleLeaveEventClick}>Leave event</MenuItem> */}
               <MenuItem onClick={handleLogoutClick}>Log out</MenuItem>

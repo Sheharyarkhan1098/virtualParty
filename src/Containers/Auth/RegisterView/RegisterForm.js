@@ -155,7 +155,7 @@ function RegisterForm({ className, onSubmitSuccess, ...rest }) {
                 Terms and Conditions
               </Link> */}
                 <a
-                  href="https://virtualfaction.com/terms-of-service/"
+                  href="https://virtualclub.com/terms-of-service/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -163,7 +163,7 @@ function RegisterForm({ className, onSubmitSuccess, ...rest }) {
               </a>{" "}
               &amp;{" "}
                 <a
-                  href="https://virtualfaction.com/privacy-policy"
+                  href="https://virtualclub.com/privacy-policy"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

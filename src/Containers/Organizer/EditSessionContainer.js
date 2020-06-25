@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("sm")]: {
       margin: theme.spacing(6, 0),
     },
+    backgroundColor: "#e6e6e6",
     padding: theme.spacing(3),
   },
   formControl: {
@@ -90,7 +91,7 @@ export default withRouter((props) => {
   }
   return (
     <Layout maxWidth="md">
-      <Page title="Virtual Faction | Create new event">
+      <Page title="Virtual Club | Create new event">
         <Paper className={classes.root}>
           {userAuth && (
             <EditEventSessionForm

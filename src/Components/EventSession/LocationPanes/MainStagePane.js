@@ -36,12 +36,12 @@ const useStyles = makeStyles((theme) => ({
     top: -8,
     paddingTop: theme.spacing(1),
     paddingBottom: theme.spacing(1),
-    backgroundColor: "#fff",
-    zIndex: 2
+    backgroundColor: "#e6e6e6", zIndex: 2
   },
   emptyPane: {
     marginTop: theme.spacing(4),
-    textAlign: "center"
+    textAlign: "center",
+    backgroundColor: "#e6e6e6"
   },
   emptyImage: {
     width: "70%",

@@ -35,7 +35,7 @@ export default function (props) {
   };
 
   const shareText = React.useMemo(
-    () => `Join me in the virtual event ${eventSessionDetails.title} that is LIVE NOW on @virtualfaction `,
+    () => `Join me in the virtual event ${eventSessionDetails.title} that is LIVE NOW on @virtualclub `,
     [eventSessionDetails.title],
   );
 

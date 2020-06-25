@@ -10,11 +10,11 @@ const sendMailTemplate = async (to, data, templateId) => {
     dynamic_template_data: data,
   };
 
-  if (process.env.GCLOUD_PROJECT === "virtualfaction") {
+  if (process.env.GCLOUD_PROJECT === "virtualclub") {
     personalizations.bcc = [
       {
-        email: "info@virtualfaction.com",
-        name: "Virtual Faction",
+        email: "info@virtualclub.com",
+        name: "Virtual Club",
       },
     ];
   }
@@ -29,12 +29,12 @@ const sendMailTemplate = async (to, data, templateId) => {
     body: {
       personalizations: [personalizations],
       from: {
-        email: "info@virtualfaction.com",
-        name: "Virtual Faction",
+        email: "info@virtualclub.com",
+        name: "Virtual Club",
       },
       reply_to: {
-        email: "info@virtualfaction.com",
-        name: "Virtual Faction",
+        email: "info@virtualclub.com",
+        name: "Virtual Club",
       },
       template_id: templateId,
     },
