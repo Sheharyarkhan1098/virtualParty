@@ -25,7 +25,8 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
     padding: theme.spacing(1),
     display: "flex",
-    position: "relative"
+    position: "relative",
+
   },
   participantContainer: {
     marginRight: theme.spacing(2)
@@ -159,7 +160,7 @@ export default function ({ setRoomsCount }) {
   }, [rooms.length, setRoomsCount]);
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} style={{ backgroundColor: "#e6e6e6" }}>
       <JoinConversationDialog
         open={joinDialog}
         setOpen={setJoinDialog}
@@ -201,7 +202,7 @@ export default function ({ setRoomsCount }) {
               size="small"
               className={classes.roomButton}
               onClick={handleCreateRoom}
-              // disabled={participantsAvailable.length <= 1}
+            // disabled={participantsAvailable.length <= 1}
             >
               Create room
             </Button>

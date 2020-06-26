@@ -169,7 +169,7 @@ const MenuIconContainer = ({
           </Badge>
         </Box>
         <Box className={classes.itemLabel}>
-          <Typography variant="caption" color="textSecondary" style={{ color: "white" }}>
+          <Typography variant="caption" style={{ color: "white" }}>
             {label}
           </Typography>
         </Box>

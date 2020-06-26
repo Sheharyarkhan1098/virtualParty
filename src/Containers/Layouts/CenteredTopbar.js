@@ -4,7 +4,7 @@ import clsx from "clsx";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/styles";
 import { AppBar, Toolbar } from "@material-ui/core";
-import VeertlyLogo from "../../Assets/Veertly_white_big.png";
+import VeertlyLogo from "../../Assets/Veertly.png";
 
 import AvatarLogin from "../../Components/Topbar/AvatarLogin";
 import Container from "@material-ui/core/Container";
@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: theme.spacing(1)
   },
   logo: {
-    width: 400,
+    width: 200,
     // marginTop: theme.spacing(1)
   },
   buttonLink: {

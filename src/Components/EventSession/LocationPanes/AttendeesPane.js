@@ -243,7 +243,7 @@ export default function ({
       {(showFilter || showStartConversation || showSearch) &&
         ((hideButtonsIfEmpty && scopedParticipants.length > 0) ||
           !hideButtonsIfEmpty) && (
-          <div className={classes.buttonContainer}>
+          <div className={classes.buttonContainer} style={{ backgroundColor: "#e6e6e6" }}>
             {showStartConversation && (
               <Button
                 variant="outlined"

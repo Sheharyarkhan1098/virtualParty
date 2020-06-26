@@ -180,7 +180,7 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
     bottom: 8,
     left: 8,
-    width: 180,
+    width: 250,
     cursor: "pointer"
   }
 }));

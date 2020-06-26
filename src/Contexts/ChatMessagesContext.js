@@ -11,7 +11,7 @@ const LIMIT_NUM_MESSAGES_QUERY = 500;
 
 const initialContext = {
   chatMessages: { [CHAT_GLOBAL_NS]: [] },
-  setChatMessages: (namespace, messages) => {}
+  setChatMessages: (namespace, messages) => { }
 };
 
 const ChatMessagesContext = React.createContext(initialContext);
@@ -50,7 +50,7 @@ export const ChatMessagesContextWrapper = ({ children }) => {
     if (
       globalChatMessagesDb &&
       JSON.stringify(prevGlobalChatMessagesDb) !==
-        JSON.stringify(globalChatMessagesDb)
+      JSON.stringify(globalChatMessagesDb)
     ) {
       const newMsgs = globalChatMessagesDb.filter(
         (m) => m.status !== "ARCHIVED"

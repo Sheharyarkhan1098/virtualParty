@@ -15,7 +15,7 @@ import {
   // IconButton
 } from "@material-ui/core";
 // import MenuIcon from "@material-ui/icons/Menu";
-import VeertlyLogo from "../../Assets/Veertly_white_big.png";
+import VeertlyLogo from "../../Assets/Veertly.png";
 
 // import AvatarLogin from "../Topbar/AvatarLogin";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
   },
   logo: {
     // width: "100%",
-    maxWidth: 250,
+    maxWidth: 200,
     // height: "100%",
     // maxHeight: 50
     // marginTop: theme.spacing(1)

@@ -13,7 +13,8 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     overflow: "auto",
     overflowX: "hidden",
-    flexWrap: "inherit"
+    flexWrap: "inherit",
+    backgroundColor: "#e6e6e6"
   },
   messagesContainerGrid: {
     flex: 1
@@ -174,7 +175,7 @@ export default ({ user, users, messages }) => {
                 item
                 key={message.messageId}
                 className={classes.messageContainer}
-                // ref={!firstMessageRef ? firstMessageRef : lastMessageRef}
+              // ref={!firstMessageRef ? firstMessageRef : lastMessageRef}
               >
                 <ChatMessage
                   message={message}
