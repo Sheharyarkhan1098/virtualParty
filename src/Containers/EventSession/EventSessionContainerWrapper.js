@@ -75,6 +75,7 @@ const EventSessionContainerWrapper = (props) => {
     firebase.firestore().collection("eventSessions").doc(sessionId)
   );
   const [lastEventSessionDBJson, setLastEventSessionDBJson] = useState("");
+
   useEffect(() => {
     const currentEventSessionDBJson = JSON.stringify(eventSessionDB);
 

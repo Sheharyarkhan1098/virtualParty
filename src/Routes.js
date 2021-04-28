@@ -80,6 +80,22 @@ const routesConfig = [
         )
       },
       {
+        exact: true,
+        path: routes.JOIN_ROOM_URL(),
+        component: lazy(() =>
+          import("./Containers/EventSession/EventPageContainerUrl")
+        )
+      },
+      {
+        exact: true,
+        path: routes.JOIN_ROOM_LIVE(),
+        component: lazy(() =>
+          import(
+            "./Containers/EventSession/PasswordProtectedEventSessionContainerUrl"
+          )
+        )
+      },
+      {
         component: lazy(() => import("./Containers/Error404View"))
       }
     ]

@@ -25,7 +25,8 @@ import RoomArchivedDialog from "../../Components/EventSession/Rooms/RoomArchived
 import {
   getEventSessionDetails,
   getUserGroup,
-  getUserCurrentLocation
+  getUserCurrentLocation,
+  getUserId
 } from "../../Redux/eventSession";
 import JoinParticipantDialog from "../../Components/EventSession/JoinParticipantDialog";
 import JitsiContext from "../../Contexts/JitsiContext";
@@ -42,6 +43,7 @@ import { VERTICAL_NAV_OPTIONS } from "../../Contexts/VerticalNavBarContext";
 import VerticalNavPane from "../../Components/EventSession/VerticalNavPane";
 import { Box } from "@material-ui/core";
 import { LobbyContainer } from "./LobbyContainer";
+import { setLocationToLobby } from "../../Modules/removeUser";
 // import CurrentCallActionsVertical from "../../Components/EventSession/CurrentCallActionsVertical";
 
 export const SIDE_PANE_WIDTH = 0;
@@ -208,6 +210,8 @@ const EventSessionContainer = (props) => {
 
   const userGroup = useSelector(getUserGroup, shallowEqual);
 
+  const userId = useSelector(getUserId, shallowEqual);
+
   const isLive = React.useMemo(() => {
     if (
       !eventSessionDetails ||
@@ -325,6 +329,17 @@ const EventSessionContainer = (props) => {
             </div>
           )}
           <div className={classes.mainPane}>
+            {userCurrentLocation === VERTICAL_NAV_OPTIONS.blocked && (
+              <Box className={classes.mainPaneScroll}>
+                {
+                  (setLocationToLobby(sessionId, userId),
+                  setTimeout(() => {
+                    window.location.reload();
+                  }, 1000))
+                }
+              </Box>
+            )}
+
             {userCurrentLocation === VERTICAL_NAV_OPTIONS.lobby && (
               <Box className={classes.mainPaneScroll}>
                 <LobbyContainer />

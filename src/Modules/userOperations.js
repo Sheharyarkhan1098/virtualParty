@@ -37,7 +37,8 @@ export const registerNewUser = async (userAuth) => {
     checkedTerms: false,
     checkedNewsletter: false,
     location: "",
-    locationDetails: null
+    locationDetails: null,
+    userType: null
   };
 
   firebase

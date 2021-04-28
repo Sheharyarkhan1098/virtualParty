@@ -1,6 +1,11 @@
 import React, { useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
+// import {
+//   // makeStyles,
+//   Switch,
+//   FormControlLabel
+// } from "@material-ui/core";
 import JoinConversationDialog from "../JoinConversationDialog";
 import NoRoomsImg from "../../../Assets/illustrations/undraw_group_hangout_5gmq.svg";
 // undraw_group_hangout_5gmq
@@ -13,11 +18,20 @@ import {
   getEventSessionDetails,
   isEventOwner as isEventOwnerSelector
 } from "../../../Redux/eventSession";
+import {
+  getParticipantsJoined,
+  getSessionId,
+  getUserId,
+  getLiveGroupsOriginal
+} from "../../../Redux/eventSession";
 import RoomCard from "./RoomCard";
 import _ from "lodash";
-import { openCreateRoom } from "../../../Redux/dialogs";
+import { openCreateRoom, closeJoinRoom } from "../../../Redux/dialogs";
 import { Box, Typography } from "@material-ui/core";
 import ReorderRoomsDialog from "./ReorderRoomsDialog";
+import { joinConversation } from "../../../Modules/eventSessionOperations";
+import { useSnackbar } from "material-ui-snackbar-provider";
+import { getUserDb } from "../../../Modules/checkAdmin";
 
 const useStyles = makeStyles((theme) => ({
   root: {},
@@ -25,8 +39,7 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
     padding: theme.spacing(1),
     display: "flex",
-    position: "relative",
-
+    position: "relative"
   },
   participantContainer: {
     marginRight: theme.spacing(2)
@@ -106,6 +119,9 @@ const useStyles = makeStyles((theme) => ({
 export default function ({ setRoomsCount }) {
   const classes = useStyles();
   const [joinDialog, setJoinDialog] = React.useState(false);
+  const [roomId, setRoomId] = React.useState("");
+  // const [allowRoomCreation, setAllowRoomCreation] = React.useState(false);
+  const [isAdmin, setIsAdmin] = React.useState(null);
 
   const [selectedGroup /* setSelectedGroup */] = React.useState(null);
   const [selectedGroupId /* setSelectedGroupId */] = React.useState(null);
@@ -118,6 +134,53 @@ export default function ({ setRoomsCount }) {
   const liveGroups = useSelector(getLiveGroups, shallowEqual);
   const eventSessionDetails = useSelector(getEventSessionDetails, shallowEqual);
 
+  const snackbar = useSnackbar();
+  const participantsJoined = useSelector(getParticipantsJoined, shallowEqual);
+  const liveGroups2 = useSelector(getLiveGroupsOriginal, shallowEqual);
+  const sessionId = useSelector(getSessionId);
+  const userId = useSelector(getUserId);
+
+  useEffect(() => {
+    async function data() {
+      const myUser = await getUserDb(userId);
+      if (myUser.userType === "Admin") setIsAdmin(true);
+      else setIsAdmin(false);
+    }
+    data();
+  });
+
+  // const handleChange = (e) => {
+  //   let value = allowRoomCreation;
+  //   if (value) {
+  //     setAllowRoomCreation(false);
+  //   } else {
+  //     setAllowRoomCreation(true);
+  //   }
+  // };
+  const handleClose = () => {
+    dispatch(closeJoinRoom());
+  };
+
+  const handleJoinRoom = (e) => {
+    e.preventDefault();
+    joinConversation(
+      sessionId,
+      participantsJoined,
+      liveGroups2,
+      userId,
+      roomId,
+      snackbar,
+      false
+    );
+    handleClose();
+  };
+
+  const handleChangeRoomId = (e) => {
+    e.preventDefault();
+    const value = e.target.value;
+    setRoomId(value);
+  };
+
   const handleCreateRoom = React.useCallback(() => dispatch(openCreateRoom()), [
     dispatch
   ]);
@@ -128,7 +191,7 @@ export default function ({ setRoomsCount }) {
     () =>
       !eventSessionDetails ||
       isEventOwner ||
-      eventSessionDetails.denyRoomCreation !== true,
+      eventSessionDetails.denyRoomCreation === true,
     [eventSessionDetails, isEventOwner]
   );
   const { rooms } = React.useMemo(() => {
@@ -194,20 +257,49 @@ export default function ({ setRoomsCount }) {
         {rooms.map((room) => {
           return <RoomCard key={room.id} room={room} />;
         })}
-        {isRoomCreationAllowed && (
-          <div className={classes.centerButton}>
+
+        <div className={classes.centerButton}>
+          {/* <label> Enter Room's URL:</label> */}
+          {/* <input
+            name="roomId"
+            placeholder="Enter Room's URL"
+            value={roomId}
+            onChange={handleChangeRoomId}
+          />
+          <Button
+            variant="outlined"
+            color="primary"
+            size="small"
+            className={classes.roomButton}
+            onClick={handleJoinRoom}
+            disabled={roomId === (null || "")}
+          >
+            Join Room
+          </Button> */}
+          {(isAdmin || isRoomCreationAllowed) && (
             <Button
               variant="outlined"
               color="primary"
               size="small"
               className={classes.roomButton}
               onClick={handleCreateRoom}
-            // disabled={participantsAvailable.length <= 1}
+              // disabled={participantsAvailable.length <= 1}
             >
               Create room
             </Button>
-          </div>
-        )}
+            // {/* <FormControlLabel
+            //   label={"Allow room creation"}
+            //   control={
+            //     <Switch
+            //       checked={allowRoomCreation}
+            //       onChange={handleChange}
+            //       style={{ color: "#white" }}
+            //     />
+            //   }
+            //   labelPlacement="start"
+            // /> */}
+          )}
+        </div>
       </div>
     </div>
   );

@@ -284,12 +284,12 @@ export const getUserSession = (store) =>
     : null;
 export const getUserCurrentLocation = (store) =>
   store.eventSession.userId &&
-    store.eventSession.participantsJoined &&
-    store.eventSession.participantsJoined[store.eventSession.userId] &&
-    store.eventSession.participantsJoined[store.eventSession.userId]
-      .currentLocation
+  store.eventSession.participantsJoined &&
+  store.eventSession.participantsJoined[store.eventSession.userId] &&
+  store.eventSession.participantsJoined[store.eventSession.userId]
+    .currentLocation
     ? store.eventSession.participantsJoined[store.eventSession.userId]
-      .currentLocation
+        .currentLocation
     : VERTICAL_NAV_OPTIONS.lobby;
 
 export const getUserAvailableForCall = (store) =>

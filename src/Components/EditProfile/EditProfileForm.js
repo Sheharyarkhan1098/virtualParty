@@ -121,7 +121,8 @@ function EditProfileForm(props) {
             checkedTerms,
             checkedNewsletter,
             location,
-            locationDetails
+            locationDetails,
+            userType
           } = userDb;
 
           const x = (str) => (str ? str : "");
@@ -146,7 +147,8 @@ function EditProfileForm(props) {
             checkedNewsletter: checkedNewsletter === true,
             checkedTerms: checkedTerms === true,
             location: x(location),
-            locationDetails: locationDetails ? locationDetails : null
+            locationDetails: locationDetails ? locationDetails : null,
+            userType: userType ? userType : null
           }));
 
           setInterestsChips(interestsChips ? interestsChips : []);

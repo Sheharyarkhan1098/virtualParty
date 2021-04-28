@@ -10,11 +10,12 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import { makeStyles } from "@material-ui/core/styles";
 import { useDocumentData } from "react-firebase-hooks/firestore";
 import firebase, { loginInEvent } from "../../Modules/firebaseApp";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import SplashScreen from "../../Components/Misc/SplashScreen";
 import CompatibilityDialog from "../../Components/Shared/CompatibilityDialog";
 import EventSessionContainerWrapper from "./EventSessionContainerWrapper";
+import { getUserFromSession } from "../../Modules/checkAdmin";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -199,6 +200,14 @@ const ProtectedEventSessionContainer = () => {
 
   const { showDialog, loading } = useAuth();
 
+  const [userAuth, loadingAuth] = useAuthState(firebase.auth());
+
+  const userId = useMemo(() => (userAuth ? userAuth.uid : null), [userAuth]);
+
+  const [isBlocked, setIsBlocked] = useState(false);
+
+  const history = useHistory();
+
   const {
     error,
     loading: loadingEvent,
@@ -215,6 +224,30 @@ const ProtectedEventSessionContainer = () => {
   };
 
   useEffect(() => {
+    async function data() {
+      let myUser = null;
+      if (
+        userId !== null &&
+        userId !== undefined &&
+        sessionId !== null &&
+        sessionId !== undefined
+      )
+        myUser = await getUserFromSession(userId, sessionId);
+      console.log(myUser, "blocked");
+      if (myUser !== undefined && myUser !== null) {
+        if (myUser.isBlocked === true) {
+          // console.log(isBlocked, "thirdBlocked");
+          // setIsBlocked(true);
+          // console.log(isBlocked, "secondBlocked");
+          history.replace("room/blocked");
+        } else setIsBlocked(false);
+      } else setIsBlocked(false);
+    }
+    data();
+    // console.log(isBlocked, "firstBlocked");
+    // if (isBlocked) {
+    //   history.replace("room/blocked");
+    // }
     if (code && !codeCheckedOnce) {
       loginInEventFn(code);
     }

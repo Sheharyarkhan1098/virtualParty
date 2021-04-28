@@ -11,6 +11,7 @@ import _ from "lodash";
 import NoConversationImg from "../../../Assets/illustrations/no_conversations.svg";
 import { Box } from "@material-ui/core";
 import AttendeesPane, { ATTENDEES_PANE_FILTER } from "./AttendeesPane";
+import PresenceSwitch from "../PresenceSwitch";
 
 const useStyles = makeStyles((theme) => ({
   root: {},
@@ -187,6 +188,7 @@ export default function (props) {
         })}
         {numConversations === 0 && (
           <Box className={classes.emptyPane}>
+            <PresenceSwitch abc="true" />
             <img
               className={classes.emptyImage}
               src={NoConversationImg}

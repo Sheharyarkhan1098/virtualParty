@@ -25,7 +25,7 @@ import useIsMobile from "../../Hooks/useIsMobile";
 //     marginBottom: theme.spacing(1)
 //   }
 // }));
-const PresenceSwitch = () => {
+const PresenceSwitch = (props) => {
   // const classes = useStyles();
   const sessionId = useSelector(getSessionId);
   const userSession = useSelector(getUserSession);
@@ -58,8 +58,18 @@ const PresenceSwitch = () => {
           }
         >
           <FormControlLabel
-            label={switchValue ? "Available" : "Do not disturb"}
-            control={<Switch checked={switchValue} onChange={handleChange} style={{ color: "#white" }} />}
+            label={
+              switchValue
+                ? "Available"
+                : `${props.abc === "true" ? "Not Available" : "Do not disturb"}`
+            }
+            control={
+              <Switch
+                checked={switchValue}
+                onChange={handleChange}
+                style={{ color: "#white" }}
+              />
+            }
             labelPlacement="start"
           />
         </Tooltip>
@@ -68,8 +78,18 @@ const PresenceSwitch = () => {
         <Tooltip title="While in a conversation, you will not be interrupted">
           <FormControlLabel
             // label={"In a conversation"}
-            label={switchValue ? "Available" : "Do not disturb"}
-            control={<Switch checked={switchValue} onChange={handleChange} />}
+            label={
+              switchValue
+                ? "Available"
+                : `${props.abc === "true" ? "Not Available" : "Do not disturb"}`
+            }
+            control={
+              <Switch
+                checked={switchValue}
+                onChange={handleChange}
+                style={{ color: "#white" }}
+              />
+            }
             labelPlacement="start"
             disabled
           />
