@@ -8,7 +8,7 @@ You can test the live version on our Demo conference room: https://app.virtualcl
 
 # How does it work
 
-## Conference Room
+## Conference Roomasd
 
 At the moment, the conference room is a [Jitsi](https://meet.jit.si/) room where all participants are connected.
 
